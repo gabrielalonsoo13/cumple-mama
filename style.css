@@ -1,0 +1,147 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'DynaPuff', cursive;
+  background: linear-gradient(145deg, #fff5f9 0%, #fffdf7 100%);
+  color: #4b2c3b;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* Animaciones */
+.fade-in {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Encabezado */
+header {
+  background: #ffe6ef;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-bottom: 3px dashed #ffbdd4;
+  box-shadow: 0 4px 12px rgba(255, 192, 203, 0.3);
+}
+
+header h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  color: #d81b60;
+  margin-bottom: 0.6rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #8e3a59;
+}
+
+/* Galería de fotos */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.8rem 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 90vw;
+  border-radius: 20px;
+  border: 4px solid #ffe0ec;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.gallery img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Sección de audios */
+.audios {
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.audios h2 {
+  font-family: 'DynaPuff', cursive;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #c2185b;
+}
+
+/* Audio individual */
+.audio-item {
+  background: #fff0f6;
+  border: 2px solid #ffc7dd;
+  border-radius: 18px;
+  padding: 1rem;
+  margin: 1.2rem auto;
+  width: 100%;
+  max-width: 92vw;
+  box-shadow: 0 6px 14px rgba(255, 105, 135, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.audio-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(255, 105, 135, 0.25);
+}
+
+.audio-item h3 {
+  margin-bottom: 0.6rem;
+  color: #ad1457;
+  font-size: 1.3rem;
+}
+
+audio {
+  width: 100%;
+  outline: none;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #8e3a59;
+  background: #fff3f6;
+  border-top: 2px dashed #ffc2d9;
+}
+
+/* Media query para pantallas grandes */
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 3rem;
+  }
+
+  .audios h2 {
+    font-size: 2.2rem;
+  }
+
+  .audio-item h3 {
+    font-size: 1.4rem;
+  }
+
+  footer {
+    font-size: 1.1rem;
+  }
+}
